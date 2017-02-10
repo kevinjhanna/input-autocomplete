@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "react-scripts-ts": "1.0.6",
-    "@kadira/storybook": "^2.21.0"
+    "typescript": "^2.1.6"
   },
   "dependencies": {
     "@types/jest": "^18.1.1",
