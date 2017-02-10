@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts-ts": "1.0.6"
+    "react-scripts-ts": "1.0.6",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "@types/jest": "^18.1.1",
@@ -17,6 +18,8 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
