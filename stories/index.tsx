@@ -33,6 +33,6 @@ storiesOf('AutoCompleteInput', module)
       onChange={onChange}
       autocompleteValues={autocompleteValues}
       type='text'
-      value='foo'
+      value='u'
     />
   ))

@@ -1,5 +1,18 @@
 import * as React from 'react'
 
+const update = (written: string, completed: string) => {
+  return (prevState: State, props: Props) : State => {
+    if (props.value) {
+      return prevState
+    }
+
+    return {
+      written: written,
+      completed: completed
+    }
+  }
+}
+
 interface State {
   written: string
   completed: string
@@ -14,7 +27,7 @@ class AutoCompleteInput extends React.Component<Props, State> {
     super(props)
 
     this.state = { 
-      written: (props.value && String(props.value)) || '',
+      written: (props.value && String(props.value)) || (props.defaultValue && String(props.defaultValue)) || '',
       completed: '',
     }
 
@@ -40,28 +53,20 @@ class AutoCompleteInput extends React.Component<Props, State> {
 
     if (!performMatch) {
       this.fireOnChange(ev)
-      this.setState({
-        written: value,
-        completed: '',
-      })
+      this.setState(update(value, ''))
       return
     }
 
     const match = this.props.autocompleteValues.find(phrase => phrase.indexOf(value) == 0)
 
     if (match) {
-      this.setState({
-        written: value,
-        completed: match.replace(value, ''),
-      }, () => {
+      this.setState(update(value, match.replace(value, '')),
+      () => {
         target.focus()
         target.setSelectionRange(value.length, match.length)
       })
     } else {
-      this.setState({
-        written: value,
-        completed: '',
-      })
+      this.setState(update(value, ''))
     }
 
     this.fireOnChange(ev, match)
@@ -71,7 +76,6 @@ class AutoCompleteInput extends React.Component<Props, State> {
     const { autocompleteValues, ...props } = this.props
 
     return <input
-      ref='input'
       {...props}
       value={`${this.state.written}${this.state.completed}`}
       onChange={this.handleOnChange}

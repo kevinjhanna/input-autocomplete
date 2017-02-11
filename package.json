@@ -4,7 +4,12 @@
   "private": true,
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@types/enzyme": "^2.7.4",
+    "@types/sinon": "^1.16.35",
+    "enzyme": "^2.7.1",
+    "react-addons-test-utils": "^15.4.2",
     "react-scripts-ts": "1.0.6",
+    "sinon": "^1.17.7",
     "typescript": "^2.1.6"
   },
   "dependencies": {
