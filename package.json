@@ -1,7 +1,9 @@
 {
   "name": "input-autocomplete",
-  "version": "0.1.0",
-  "private": true,
+  "author": "Kevin J. Hanna",
+  "main": "./build/dist/index.js",
+  "types": "./src/InputAutocomplete.d.ts",
+  "version": "0.1.4",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@types/enzyme": "^2.7.4",
@@ -15,10 +17,10 @@
     "@types/jest": "^18.1.1",
     "@types/react": "^15.0.8",
     "react-dom": "^15.4.2",
-    "@types/react-dom": "^0.14.23"
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2"
   },
   "dependencies": {
-    "react": "^15.4.2"
   },
   "scripts": {
     "start": "react-scripts-ts start",

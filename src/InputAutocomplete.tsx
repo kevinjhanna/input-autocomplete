@@ -1,5 +1,9 @@
 import * as React from 'react'
 
+export interface Props extends React.HTMLProps<HTMLInputElement> {
+  autocompleteValues: string[]
+}
+
 const update = (written: string, completed: string) => {
   return (prevState: State, props: Props) : State => {
     if (props.value) {
@@ -13,16 +17,12 @@ const update = (written: string, completed: string) => {
   }
 }
 
-interface State {
+export interface State {
   written: string
   completed: string
 }
 
-interface Props extends React.HTMLProps<HTMLInputElement> {
-  autocompleteValues: string[]
-}
-
-class InputAutocomplete extends React.Component<Props, State> {
+export class InputAutocomplete extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
