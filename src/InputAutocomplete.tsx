@@ -22,7 +22,7 @@ interface Props extends React.HTMLProps<HTMLInputElement> {
   autocompleteValues: string[]
 }
 
-class AutoCompleteInput extends React.Component<Props, State> {
+class InputAutocomplete extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
@@ -83,4 +83,4 @@ class AutoCompleteInput extends React.Component<Props, State> {
   }
 }
 
-export default AutoCompleteInput
+export default InputAutocomplete
