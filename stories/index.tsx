@@ -14,7 +14,7 @@ const autocompleteValues = [
   'utm_content',
 ]
 
-storiesOf('AutoCompleteInput', module)
+storiesOf('AutocompleteInput', module)
   .addDecorator(story => (
     <div>
       <p>Try writing utm_source, utm_medium, utm_campaign, utm_term or utm_content</p>
@@ -28,11 +28,17 @@ storiesOf('AutoCompleteInput', module)
       type='text'
     />
   ))
-  .add('Controlled input', () => (
-    <InputAutocomplete
-      onChange={onChange}
+  .add('Controlled input', () => {
+    let state = ''
+    const handleOnChange = (ev: React.FormEvent<HTMLInputElement>) => {
+      onChange(ev)
+      state = ev.currentTarget.value
+    }
+
+    return <InputAutocomplete
+      onChange={handleOnChange}
+      value={state}
       autocompleteValues={autocompleteValues}
       type='text'
-      value='u'
     />
-  ))
+  })

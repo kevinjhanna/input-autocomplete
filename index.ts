@@ -1,1 +1,1 @@
-export { InputAutocomplete } from './src/inputAutocomplete'
+export { InputAutocomplete } from './src/InputAutocomplete'

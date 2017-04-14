@@ -1,4 +1,5 @@
 build/
+_gh-pages
 
 # dependencies
 /node_modules

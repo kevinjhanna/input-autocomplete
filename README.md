@@ -13,6 +13,9 @@ Because HTML5 autocomplete only show options based on earlier user typed values.
 - Tiny abstraction over input element.
 - Typescript types.
 
+## Demo and examples
+Live demo: [kevinjhanna.github.io/input-autocomplete](https://kevinjhanna.github.io/input-autocomplete/)
+
 ## Installation
 ```
 npm install input-autocomplete --save
