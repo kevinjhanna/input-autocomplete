@@ -1,4 +1,6 @@
 build/
+
+# Github pages
 _gh-pages
 
 # dependencies
