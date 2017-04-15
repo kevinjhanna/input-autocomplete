@@ -1,9 +1,13 @@
 {
   "name": "input-autocomplete",
   "author": "Kevin J. Hanna",
-  "main": "./build/dist/index.js",
+  "main": "./build/index.js",
+  "description": "Tiny react input with autocomplete",
+  "homepage": "https://github.com/kevinjhanna/input-autocomplete",
+  "license": "MIT",
   "types": "./src/InputAutocomplete.d.ts",
-  "version": "0.1.4",
+  "version": "1.0.0",
+  "keywords": ["react", "autocomplete", "react-autocomplete-input", "tiny", "typescript"],
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@types/enzyme": "^2.7.4",
@@ -25,7 +29,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "tsc && jest build/dist/tests/*.js",
+    "test": "tsc && jest build/tests/*.js",
     "storybook": "start-storybook -p 6006",
     "gh-pages:clean": "rimraf _gh-pages",
     "gh-pages:build": "$(npm bin)/build-storybook -o _gh-pages",
