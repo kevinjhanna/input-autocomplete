@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
 import sinon = require('sinon')
-import InputAutocomplete from './InputAutocomplete'
+import InputAutocomplete from '../src/InputAutocomplete'
 
 describe('Uncontrolled InputAutocomplete', () => {
   it('changes value', () => {
