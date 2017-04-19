@@ -6,7 +6,7 @@
   "homepage": "https://github.com/kevinjhanna/input-autocomplete",
   "license": "MIT",
   "types": "./src/InputAutocomplete.d.ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": ["react", "autocomplete", "react-autocomplete-input", "tiny", "typescript"],
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "typescript": "^2.2.1"
   },
   "peerDependencies": {
-    "react": "15.0"
+    "react": "^15.4.2"
   },
   "dependencies": {},
   "scripts": {
