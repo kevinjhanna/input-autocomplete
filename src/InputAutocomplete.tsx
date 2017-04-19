@@ -39,11 +39,20 @@ export class InputAutocomplete extends React.Component<Props, State> {
       return
     }
 
-    if (changedValue) {
-      ev.currentTarget.value = changedValue
+    if (!changedValue) {
+      this.props.onChange(ev)
+      return
     }
 
-    this.props.onChange(ev)
+    const newEvent: React.FormEvent<HTMLInputElement> = {
+      ...ev,
+      currentTarget: {
+        ...ev.currentTarget,
+        value: changedValue
+      }
+    }
+
+    this.props.onChange(newEvent)
   }
 
   handleOnChange(ev: React.FormEvent<HTMLInputElement>) {
