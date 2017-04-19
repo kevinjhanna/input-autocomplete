@@ -37,15 +37,20 @@ npm install input-autocomplete --save
 ```jsx
   import { InputAutocomplete } from 'input-autocomplete'
 
-  let state = 'john lennon'
+  let state = { 
+    name: ''
+  }
+
   const handleOnChange = (ev) => {
-    state = ev.currentTarget.value
+    state = {
+      name: ev.currentTarget.value
+    }
   }
 
   <InputAutocomplete
     type='text'
     autocompleteValues={['john lennon', 'john travolta']}
-    value={state}
+    value={state.name}
     onChange={handleOnChange}
   />
 ```
