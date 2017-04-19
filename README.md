@@ -1,5 +1,5 @@
 # Input Autocomplete
-Text input with HTML5-like autocomplete.
+Tiny react input component with HTML5-like autocomplete.
 
 ![input-autocomplete-demo](https://cloud.githubusercontent.com/assets/387015/25046633/e1eaff8a-2108-11e7-8ba8-f66e290f6ecd.gif)
 

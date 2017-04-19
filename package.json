@@ -2,7 +2,7 @@
   "name": "input-autocomplete",
   "author": "Kevin J. Hanna",
   "main": "./build/index.js",
-  "description": "Tiny react input with autocomplete",
+  "description": "Tiny react input component with HTML5-like autocomplete.",
   "homepage": "https://github.com/kevinjhanna/input-autocomplete",
   "license": "MIT",
   "types": "./src/InputAutocomplete.d.ts",
