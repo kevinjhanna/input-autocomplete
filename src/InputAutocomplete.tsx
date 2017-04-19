@@ -77,7 +77,7 @@ export class InputAutocomplete extends React.Component<Props, State> {
 
     return <input
       {...props}
-      value={`${this.state.written}${this.state.completed}`}
+      value={props.value || `${this.state.written}${this.state.completed}`}
       onChange={this.handleOnChange}
     />
   }

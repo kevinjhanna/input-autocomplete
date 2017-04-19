@@ -58,7 +58,7 @@ describe('Controlled InputAutocomplete', () => {
     expect(wrapper.find('input').props().value).toBe('a value')
   })
 
-  it('does not change value', () => {
+  it('does not change value when user tries to change it', () => {
     const wrapper = shallow(<InputAutocomplete 
       autocompleteValues={['foo', 'bar']}
       value='original'
@@ -74,6 +74,19 @@ describe('Controlled InputAutocomplete', () => {
 
     wrapper.simulate('change', event)
     expect(wrapper.find('input').props().value).toBe('original')
+  })
+
+  it('does change value via props', () => {
+    const wrapper = shallow(<InputAutocomplete 
+      autocompleteValues={['foo', 'bar']}
+      value='original'
+    />)
+
+    wrapper.setProps({
+      value: 'other'
+    })
+
+    expect(wrapper.find('input').props().value).toBe('other')
   })
 
   it('fires onChange prop', () => {
