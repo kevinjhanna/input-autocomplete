@@ -29,15 +29,18 @@ storiesOf('AutocompleteInput', module)
     />
   ))
   .add('Controlled input', () => {
-    let state = ''
+    const state = { 
+      value: ''
+    }
+
     const handleOnChange = (ev: React.FormEvent<HTMLInputElement>) => {
       onChange(ev)
-      state = ev.currentTarget.value
+      state.value = ev.currentTarget.value
     }
 
     return <InputAutocomplete
       onChange={handleOnChange}
-      value={state}
+      value={state.value}
       autocompleteValues={autocompleteValues}
       type='text'
     />
