@@ -7,10 +7,6 @@ export interface Props extends React.HTMLProps<HTMLInputElement> {
 
 const update = (written: string, completed: string) => {
   return (prevState: State, props: Props) : State => {
-    if (props.value) {
-      return prevState
-    }
-
     return {
       written: written,
       completed: completed

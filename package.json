@@ -6,7 +6,7 @@
   "homepage": "https://github.com/kevinjhanna/input-autocomplete",
   "license": "MIT",
   "types": "./src/InputAutocomplete.d.ts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": ["react", "autocomplete", "react-autocomplete-input", "tiny", "typescript"],
   "repository": {
     "type": "git",

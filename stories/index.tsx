@@ -29,19 +29,29 @@ storiesOf('AutocompleteInput', module)
     />
   ))
   .add('Controlled input', () => {
-    const state = { 
-      value: ''
+    class StatefulWrapper extends React.Component<{}, { value: string}> {
+      constructor() {
+        super()
+        this.state = {
+          value: ''
+        }
+      }
+
+      handleOnChange = (ev: React.FormEvent<HTMLInputElement>) => {
+        onChange(ev)
+        const value = ev.currentTarget.value
+        this.setState({ value })
+      }
+
+      render() {
+        return <InputAutocomplete
+          onChange={this.handleOnChange}
+          value={this.state.value}
+          autocompleteValues={autocompleteValues}
+          type='text'
+        />
+      }
     }
 
-    const handleOnChange = (ev: React.FormEvent<HTMLInputElement>) => {
-      onChange(ev)
-      state.value = ev.currentTarget.value
-    }
-
-    return <InputAutocomplete
-      onChange={handleOnChange}
-      value={state.value}
-      autocompleteValues={autocompleteValues}
-      type='text'
-    />
+    return <StatefulWrapper />
   })
