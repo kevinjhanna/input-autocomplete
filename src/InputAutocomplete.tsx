@@ -1,4 +1,5 @@
 import * as React from 'react'
+import find from './find'
 
 export interface Props extends React.HTMLProps<HTMLInputElement> {
   autocompleteValues: string[]
@@ -66,7 +67,7 @@ export class InputAutocomplete extends React.Component<Props, State> {
       return
     }
 
-    const match = this.props.autocompleteValues.find(phrase => phrase.indexOf(value) == 0)
+    const match = find(this.props.autocompleteValues, autocompleteValue => autocompleteValue.indexOf(value) == 0)
 
     if (match) {
       this.setState(update(value, match.replace(value, '')),
